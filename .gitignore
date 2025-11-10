@@ -15,21 +15,15 @@ coverage/
 *.local
 *.lock
 
-# Model files (too large for git)
-*.keras
-*.h5
-*.pkl
-*.pth
-*.onnx
-*.pb
+# Model files - tracked with Git LFS (see .gitattributes)
+# *.keras, *.h5, *.pkl, *.pth, *.onnx, *.pb, *.rar are tracked via LFS
 *.tflite
 *.pt
 *.pth.tar
-models/
 *.weights
 *.ckpt
 
-# Large data files
+# Large data files (videos - too large even for LFS free tier)
 *.mp4
 *.avi
 *.mov
@@ -39,7 +33,6 @@ models/
 *.tar
 *.gz
 *.7z
-*.rar
 
 # Recordings and captures
 recordings/

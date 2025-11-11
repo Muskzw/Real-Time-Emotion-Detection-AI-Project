@@ -38,3 +38,8 @@ coverage/
 recordings/
 captures/
 *.webm
+
+# Dataset folders
+dataset/
+datasets/
+data/

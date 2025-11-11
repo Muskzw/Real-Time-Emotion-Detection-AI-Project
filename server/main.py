@@ -400,12 +400,6 @@ def run_func(img):
     return final_emotion
     
 
-'''
-dir_path = 'sample'
-
-for img_file in os.listdir(dir_path):
-    img_path = os.path.join(dir_path, img_file)
-    print(f"Processing image: {img_file}")
-    run_func(img_path)
-    a = input("Press Enter to continue to the next image...")
-'''
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)

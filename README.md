@@ -1,21 +1,45 @@
 # Real-Time Emotion Detection AI Project
 
-A front-end for real-time emotion analysis via webcam and microphone, with analytics UI and hooks for a FastAPI backend.
+A real-time emotion detection system using AI/ML models to analyze facial expressions from webcam input. Features a modern web frontend and a FastAPI backend server.
 
-## Structure
-- `public/`: Static files served to the browser (HTML, static assets).
-- `src/`: Front-end source code (JS, CSS, components).
-- `assets/`: Images, models, icons and other large static assets.
-- `docs/`: Documentation, notes, diagrams.
-- `tests/`: Test files.
+## Project Structure
 
-## Local Development
-Open `index.html` in a browser (or serve via a simple HTTP server).
+- `frontend/`: Client-side code including HTML, CSS, JavaScript, and static assets
+  - `index.html`: Main application interface
+  - `src/`: Source code (JS, CSS, components)
+  - `assets/`: Images, icons, and other static assets
+  - `public/`: Public static files
 
-Backend endpoint is configurable in the script via `API_BASE_URL` and `API_ENDPOINT`.
+- `server/`: API server implementation
+  - `main.py`: FastAPI application with emotion detection endpoints
+  - `models/`: Trained ML models for emotion classification
+  - `requirements.txt`: Python dependencies
+  - `README.md`: Server setup and running instructions
 
-## Scripts
-No build tooling yet. Add your preferred bundler or framework if needed.
+- `notebooks/`: Jupyter notebooks for data analysis, model training, and experimentation
+
+- `docs/`: Documentation, notes, and diagrams
+- `tests/`: Test files
+
+## Quick Start
+
+### Frontend
+1. Open `frontend/index.html` in a web browser, or serve it using a local HTTP server
+2. The frontend connects to the API server at `http://localhost:8000` by default
+
+### Backend Server
+1. Navigate to the `server/` directory
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the server: `python main.py` or `uvicorn main:app --reload`
+4. See `server/README.md` for detailed setup instructions
+
+## Features
+
+- Real-time emotion detection from webcam feed
+- Support for 8 emotions: Happy, Neutral, Sad, Angry, Surprised, Disgusted, Contempt, Fear
+- Analytics dashboard with charts and statistics
+- Session recording capabilities
+- Modern, responsive UI
 
 ## License
 MIT
